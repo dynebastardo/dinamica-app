@@ -1,0 +1,35 @@
+@import url("dinamica.css");
+
+.dm-login-back {
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+}
+.dm-login-form {
+    margin: 4em auto;
+    height: 30em;
+    width: 22em;
+    background-color: #607d8b;
+}
+form {
+    display: block;
+    margin-left: 4em;
+}
+label {
+    clear: both;
+    float:left;
+}
+.inputText {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    clear: both;
+    float:left;
+    margin-top: 4em;
+}
