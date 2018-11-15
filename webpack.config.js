@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
+const webpack = require('webpack');
 module.exports = {
     resolve: {
         alias: {
@@ -53,11 +54,14 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
+        }),
+        new webpack.ProvidePlugin({
+            Promise: ['es6-promise', 'Promise']
         })
     ],
     devtool: "cheap-source-map",
-    // output: {
-    //     filename: "./src/assets/js/jquery.min.js",
-    //     path: path.resolve(__dirname, 'dist')
-    // }
+    node: {
+        fs: "empty",
+        net: "empty"
+    }
 };
